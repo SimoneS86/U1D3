@@ -12,8 +12,6 @@ public class MyMain {
 		System.out.println(stringa2 + " ha un numero pari di caratteri? " + stringaPariDispari(stringa2));
 		System.out.println(anno1 + " e' bisestile? " + annoBisestile(anno1));
 		System.out.println(anno2 + " e' bisestile? " + annoBisestile(anno2));
-		
-
 	}
 	
 	public static boolean stringaPariDispari(String str) {
@@ -22,15 +20,7 @@ public class MyMain {
 	}
 
 	public static boolean annoBisestile(int anno) {
-	    if (anno % 4 == 0 && anno % 100 != 0) {
-	        return true;
-	    } else if (anno % 400 == 0) {
-	        return true;
-	    } else {
-	        return false;
-	    }
+	    return anno % 4 == 0 || anno % 100 == 0 && anno % 400 == 0 ? true : false;
+	 
 	}
-
-
-
 }
